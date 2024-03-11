@@ -96,7 +96,7 @@ int main()
     unsigned long t2 = probe_timing(&fr_buff[4096]);
     if (t2 < t1)
     {
-        printf("Got signal: Memory reuse, Speculative UAF, and Speculative control-flow hijack triggered successfully.\n");
+        printf("Got signal (%lu < %lu): Memory reuse, Speculative UAF, and Speculative control-flow hijack triggered successfully.\n", t2, t1);
     }
     else
     {
